@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<HTML> <BODY> <HEAD>
+
+<style>
+
+.container{
+display:block;
+background-color:white ;
+text-align:center;
+margin-top: 10%;
+height: 90%;
+
+}
+.formcontent{
+ position: relative;
+ padding-top: 75px;
+}
+
+body{
+background-color: orange;
+font-size: 20px;
+}
+
+</style>
+
+<body >
+<div class="container">
+
+
+<img  src= '\static\spirent.png'  border = '2'   width = '130' height = '100' alt = 'logo' style="float:left;margin:10px;" align='left'/>
+
+<div class="formcontent">
+<form method="POST" action="/register">
+
+
+
+    <label>Username
+    <input type="text" placeholder="Enter Username" style='width:600px;margin:10px;' name="uname" required></label>
+    </br>
+    <label>Password
+    <input type="password" placeholder="Enter Password"  color='blue' style='width:600px;margin:10px;' name="psw" required></label>
+    </br>
+    <button  style="background-color:grey;font-size:15pt;height:20pt;width:150pt" type="submit">Register</button>{{msg}}<pre>
+	</br>
+    <a style="background-color:grey;font-size:20px;height:20pt;width:110pt;align:left" href="/login">Go Back</a>
+
+
+
+
+</form>
+</div>
+</div>
+</body>
+
+</HTML>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<HTML> <BODY> <HEAD>
+
+<style>
+div.tools
+{
+background-color:white ;
+colour: white;
+margin: 60px 0 60px 0;
+padding: 10px;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 600px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 150x;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 3;
+    bottom: 50%;
+
+    margin-left: -700px;
+}
+
+
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
+
+</style>
+</head>
+<body style="text-align:right">
+
+<h2>Help</h2>
+
+<div class="popup" onclick="myFunction()">Click here!
+  <span class="popuptext" id="myPopup">Regression Analyzer Tool!
+  The main aim of the project is to develop the Regression Tool were the tool can automatically download the failures of jobs and identify the Errors, Info, Warnings and generate the Summary Report along with description , and also summary report can sent the email to the concern person. </span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
+function after(){
+ document.getElementById("spinner").style.opacity=1;
+}
+
+</script>
+
+
+<body>
+<div class='tools'>
+<body  bgcolor = 'Orange'</body>
+
+<img  src= '\static\spirent.png'  border = '3'   width = '150' height = '100' alt = 'logo' align='left'/>
+
+
+<center><center><font  color='blue' style='font-size:60pt;text-align:top'  face = 'Times New Roman' >Regression Analayser Tool</font></center>
+<center><span class="convText"><font color='blue' style='font-size:30pt;vertical-align='left'  face = 'Times New Roman'>Enter the Regression link summary url</font></span></center>
+
+<form action="" method="POST"><br/><pre><center><p id="ERROR"></p>
+    <input type='text'  name="fname"  style='width:800px;height:40px;font-size:18px;'/></pre></center>
+
+<center></a><input  type="submit" style="background-color:grey;font-size:13pt" name="submit" value="Analyze" onclick="after();">   {{error}}</center>
+
+
+
+
+</pre></center></form>
+
+
+<svg style="opacity:0" id="spinner" class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+   <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg>
+
+
+
+
+</HTML>

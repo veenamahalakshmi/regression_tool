@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<HTML> <BODY> <HEAD>
+
+<style>
+div.tools
+{
+background-color:white ;
+colour: white;
+margin: 170px 0 60px 0;
+padding: 10px;
+}
+</style>
+
+
+
+<body  bgcolor = 'Orange' align ='center' </body>
+
+
+<br/><center></div> <div  class='tools'><br/><center><font color='blue' style='font-size:30pt'  face = 'Times New Roman'>{% if list_of_elements %}Link to summary analyse File {% endif %}{% if read %}The contents of File are{% endif %}</font></center>
+
+   {% if url %}
+    <img  src= '\static\spirent.png'  border = '3'   width = '150' height = '100' alt = 'logo' align='left'/>
+<center><form action="" method="POST|GET"><br/><pre><center></p>
+<center><a href="http://localhost:8000/" target="blank" href="file:///{{url}}"></center><center><button style="background-color:whitesmoke;font-size:20pt;width: 30em" id="btn_click"> {{url}} </button></center></a></form>
+{% endif %}
+
+
+
+
+<p style="white-space: pre-line; text-align: left;">{{ read }}</p>
+
+    <ul>
+    {% for i in list_of_elements %}
+    <li><form method="post" action="/display"><input name="filename" type="text" value="{{ i }}" hidden/><input type="submit" value="{{ i }}"></form></li>
+    {% endfor %}
+    </ul>
+<a style="background-color:grey;font-size:20px;height:20pt;width:110pt;align:left" href="/login" >logout</a>
+
+    <a style="background-color:grey;font-size:20px;height:20pt;width:110pt;align:left" href="/first-page" >GO Back</a>
+
+    <a style="background-color:grey;font-size:20px;height:20pt;width:110pt;align:left" href="/regression_report" >Analyse</a>
+
+
+</body></center>
+
+</HTML>
